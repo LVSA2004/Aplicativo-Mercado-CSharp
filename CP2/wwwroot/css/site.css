@@ -1,35 +1,30 @@
-﻿html {
-  font-size: 14px;
+html {
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 html {
-  position: absolute;
-  min-height: 100%;
-}
-
-body {
-  margin-bottom: 60px;
+    position: relative;
+    min-height: 100%;
 }
 
 img {
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 100%; /* Garante que a imagem n�o ultrapasse a largura m�xima */
-    max-height: 720px; /* Limita a altura m�xima da imagem */
-    width: auto;
-    --color: #8A9B0F; /* the border color */
-    --border: 10px; /* the border thickness*/
-    --offset: 20px; /* control the offset*/
-    --gap: 5px; /* the gap on hover */
+    width: 900px;
+    height: 800px;
+    max-width: 100%; 
+    max-height: 720px; 
+    --color: #8A9B0F; 
+    --border: 10px; 
+    --offset: 20px; 
+    --gap: 5px; 
 
     --_c: var(--color) var(--border), #0000 0 calc(100% - var(--border)),var(--color) 0;
-    --_o: calc(3*var(--offset));
+    --_o: calc(3var(--offset));
     padding: calc(var(--gap) + var(--border)) calc(var(--gap) + var(--border) + var(--offset)) calc(var(--gap) + var(--border) + var(--offset)) calc(var(--gap) + var(--border));
     background: linear-gradient( var(--_c)) var(--_o) var(--_o), linear-gradient(90deg,var(--_c)) var(--_o) var(--_o);
     background-size: calc(100% - var(--_o)) calc(100% - var(--_o));
@@ -52,7 +47,19 @@ body {
     height: 100vh;
     margin: 0;
     grid-auto-flow: column;
+    margin-bottom: 60px;
     place-content: center;
+}
+
+header {
+    padding-left: 38%;
+    margin-right: auto;
+    margin-left: auto;
+    position: fixed;
+}
+
+main {
+    padding-top: 70px;
 }
 
 .nav-link.a {
@@ -63,31 +70,6 @@ body {
     background-color: #8A9B0F !important;
 }
 
-h1 {
+h1, h3, h4, p, thead, span, label, span, tr, td, dl, dt, dd {
     color: white;
 }
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-}
-
-h4 {
-    color: white;
-}
-
-p {
-    color: white;
-}
-
-thead {
-    color: white;
-}
-
-span {
-    color: white;
-}
-/* Heading and text styles */
-h1, h4, p, thead, span, label, span, tr, td {
-    color: white;
-}
-
